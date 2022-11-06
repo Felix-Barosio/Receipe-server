@@ -37,4 +37,11 @@ class ApplicationController < Sinatra::Base
     )
     receipe.to_json
   end
+
+  #delete a recipe
+  delete "/receipes/:id" do
+    receipe = Receipe.find(params[:id])
+    receipe.destroy
+    receipe.to_json
+  end
 end
