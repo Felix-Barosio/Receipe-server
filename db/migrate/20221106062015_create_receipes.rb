@@ -8,6 +8,7 @@ class CreateReceipes < ActiveRecord::Migration[6.1]
       t.string :origin
       t.string :category
       t.string :video
+      t.timestamps null: false
     end
   end
 end
