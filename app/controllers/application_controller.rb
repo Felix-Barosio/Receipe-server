@@ -24,6 +24,7 @@ class ApplicationController < Sinatra::Base
       instructions: params[:instructions],
       origin: params[:origin],
       category: params[:category],
+      tags: params[:tags],
       video: params[:video]
     )
     receipe.to_json
@@ -39,6 +40,7 @@ class ApplicationController < Sinatra::Base
       instructions: params[:instructions],
       origin: params[:origin],
       category: params[:category],
+      tags: params[:tags],
       video: params[:video]
     )
     receipe.to_json
