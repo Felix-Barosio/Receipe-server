@@ -15,5 +15,18 @@ class ApplicationController < Sinatra::Base
     receipe.to_json
   end
 
+  #create a new receipe
+  post "/receipes" do
+    receipe = Receipe.create(
+      meal_name: params[:meal_name],
+      image_url: params[:image_url],
+      ingredients: params[:ingredients],
+      instructions: params[:instructions],
+      origin: params[:origin],
+      category: params[:category],
+      video: params[:video]
+    )
+    receipe.to_json
+  end
 
 end
