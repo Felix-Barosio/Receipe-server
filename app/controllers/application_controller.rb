@@ -33,7 +33,13 @@ class ApplicationController < Sinatra::Base
   patch "/receipes/:id" do
     receipe = Receipe.find(params[:id])
     receipe.update(
-    ingredients: params[:ingredients]
+      meal_name: params[:meal_name],
+      image_url: params[:image_url],
+      ingredients: params[:ingredients],
+      instructions: params[:instructions],
+      origin: params[:origin],
+      category: params[:category],
+      video: params[:video]
     )
     receipe.to_json
   end
