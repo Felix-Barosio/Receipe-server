@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2022_11_06_062015) do
     t.string "origin"
     t.string "category"
     t.string "video"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
