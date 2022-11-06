@@ -29,4 +29,12 @@ class ApplicationController < Sinatra::Base
     receipe.to_json
   end
 
+  #patch a recipe
+  patch "/receipes/:id" do
+    receipe = Receipe.find(params[:id])
+    receipe.update(
+    ingredients: params[:ingredients]
+    )
+    receipe.to_json
+  end
 end
