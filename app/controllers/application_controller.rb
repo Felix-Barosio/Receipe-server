@@ -52,4 +52,19 @@ class ApplicationController < Sinatra::Base
     receipe.destroy
     receipe.to_json
   end
+
+  get "/messages" do
+    message = Message.all
+    message.to_json
+  end
+  
+  post "/messages" do
+    message = Message.create(
+      name: params[:name],
+      email: params[:email],
+      message: params[:message]
+    )
+    message.to_json
+  end
+
 end
